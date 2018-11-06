@@ -1,0 +1,10 @@
+backup_world/
+game/
+game_versions/
+user_settings/
+
+__pycache__/
+
+test/
+
+scr/__pycache__/
