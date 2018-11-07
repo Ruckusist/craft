@@ -26,7 +26,7 @@ async def game(exe):
     while True:
         print(f"test {counter}")
         if exe.readlines():
-            for i in data:
+            for i in exe.readlines():
                 print(i)
         else:
             input = raw_input("to_server> ")

@@ -4,7 +4,7 @@ from src.download import get_mincraft_versions, download_new_version
 from src.update import get_current_version, backup_settings, backup_world, swapin_new_server, restore_user_settings
 from src.setup import setup
 from src.run import launch_game, game_loop
-if False:
+if True:
     dirs = setup()
     versions = get_mincraft_versions(dirs)
     recent_version = list(versions)[0]
@@ -38,10 +38,11 @@ if False:
         swapin_new_server(ver)
         print(f"Finished Setting up Minecraft Server v: {ver['version']}")
 # # # # # # #
-dirs = setup()
-os.chdir(os.path.join(os.getcwd(), 'game'))
-launch_file = os.path.join(dirs[-1], 'game', 'server.jar')
-running_game = launch_game(launch_file)
-# This runs an asyncio loop elsewhere.
-game_loop(running_game)
-print('test')
+if False:
+    dirs = setup()
+    os.chdir(os.path.join(os.getcwd(), 'game'))
+    launch_file = os.path.join(dirs[-1], 'game', 'server.jar')
+    running_game = launch_game(launch_file)
+    # This runs an asyncio loop elsewhere.
+    game_loop(running_game)
+    print('test')

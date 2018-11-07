@@ -61,10 +61,12 @@ def setup(root=None) -> list:
     for dir in dirs:
         if not os.path.isdir(os.path.join(root, dir)):
             os.mkdir(os.path.join(root, dir))
-    # in game folder place a version.txt
+    # in game folder place a version.txt, and a logs folder
     if not os.path.exists(os.path.join(root, 'game', 'version.txt')):
         with open(os.path.join(root, 'game', 'version.txt'), 'w+') as f:
             f.write('version: None')
+    if not os.path.isdir(os.path.join(root, 'game', 'logs')):
+        os.mkdir(os.path.join(root, 'game', 'logs'))
     # in user_settings folder place a eula.txt
     if not os.path.exists(os.path.join(root, 'user_settings', 'eula.txt')):
         with open(os.path.join(root, 'user_settings', 'eula.txt'), 'w+') as f:

@@ -23,13 +23,18 @@ which leads to:
     having trouble talking to the server from stdin = asyncio.subprocess.PIPE.
     it will talk once and then it cant talk again on that pipe? so it needs
     another one? every loop? i dont understand.
+    link to probable solution:
+        - https://docs.python.org/3/library/asyncio-subprocess.html
 
 # Steps to recreate issue
 git clone https://github.com/Ruckusist/craft
 cd craft
 python3 craft.py
 python3 test.py
-that should get you to the errors ive got. im gonna just leave this here for now.
+- check game/logs/command.log for the stdout of that last crashed run
+- there is clearly 1 Hello World in there... but thats it.
+- pick up right here.
+
 
 ######
 Thanks
